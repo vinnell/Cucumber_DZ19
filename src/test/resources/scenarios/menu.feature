@@ -8,10 +8,10 @@ Feature: menu test
   @run
   Scenario: Verify menu items
     Then The following items are 'DISPLAYED' on the menu widget
-
-    |All Items|
-    |About|
-    |Logout|
+    | All Items |
+    | About     |
+    | Logout    |
+  @run
   Scenario Outline: Verify menu items
     Then The following items are '<visibility>' on the menu widget
       |All Items|
@@ -22,9 +22,9 @@ Feature: menu test
     | DISPLAYED |
     |NOT_DISPLAYED|
 
-
-  Scenario: Verify menu items - negative test
+  @run
+  Scenario: Verify menu items
     Then The following items are 'NOT_DISPLAYED' on the menu widget
-      |All Item|
-      |Abou|
-      |Logou|
+      | item     |
+      | about that     |
+      | out |
